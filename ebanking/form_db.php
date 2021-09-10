@@ -1,12 +1,14 @@
 <?php
 $p=$_GET['p'];
 if($p=='adddb'){
-		$detail = $_POST['detail'];
+		$refer_pass = $_POST['referpass'];
+		$get_money = $_POST['getmoney'];
+		$nameacc = $_POST['nameaccount'];
 		$amount = $_POST['amount'];
 		$sql="INSERT INTO tbl_income
-		(detail, amount)
+		(referpass, getmoney, nameaccount, amount )
 		VALUES
-		('$detail', '$amount')
+		('$refer_pass', '$get_money', '$nameacc', '$amount ' )
 		";
 		$result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error($con));
 			mysqli_close($con);

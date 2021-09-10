@@ -66,6 +66,40 @@ ALTER TABLE `member`
   MODIFY `id_acc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
+
+CREATE TABLE `tbl_income` (
+  `id` int(11) NOT NULL,
+  `refer_pass` text NOT NULL,
+  `get_money` text NOT NULL,
+  `name_acc` text NOT NULL,
+  `amount` text NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='สมาชิก';
+
+INSERT INTO `tbl_income` (`id`, `refer_pass`, `get_money`,'name_acc','amount') VALUES
+(1, '0001sd', 'true', 'bird','200'),
+
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_income`
+--
+ALTER TABLE `tbl_income`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_income`
+--
+ALTER TABLE `tbl_income`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
